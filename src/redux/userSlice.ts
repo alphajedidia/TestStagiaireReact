@@ -1,14 +1,13 @@
-// userSlice.ts
+
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface User {
   id: number;
   name: string;
-  username:string;
-  email:string;
-  website:string;
-  phone:string;
-  // Add other user properties here
+  username: string;
+  email: string;
+  website: string;
+  phone: string;
 }
 
 interface UserState {
@@ -23,7 +22,7 @@ const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    setUsers(state, action: PayloadAction<User[]>) {
+    setUsers: (state, action: PayloadAction<User[]>) => {
       state.users = action.payload;
     },
   },
